@@ -108,6 +108,58 @@ td:hover, #switcher:hover{
     background-color: var(--secondary-color);
 }
 
+.black_advanced{
+    animation: bl-adv 800ms;
+}
+
+.black_basic{
+    animation: bl-bas 800ms;
+}
+
+.white_advanced{
+    animation: wh-adv 800ms;
+}
+
+.white_basic{
+    animation: wh-bas 800ms;
+}
+
+@keyframes bl-adv{
+    from{
+        transform: translateX(100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes bl-bas{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes wh-adv{
+    from{
+        transform: translateX(0vw);
+    }
+    to{
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes wh-bas{
+    from{
+        transform: translateX(-100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
 @media screen and (max-width: 1000px){
     td:hover, #switcher:hover{
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);

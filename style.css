@@ -1,0 +1,115 @@
+:root{
+    --secondary-color: rgba(255, 0, 110, 0.65);
+    --black-color: #090909;
+    --white-color: #EFEFEF;
+    --shadow: rgba(0, 0, 0, 0.23);
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    transition: 0.8s;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#result{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+}
+
+#switcher{
+    border-radius: 50vh;
+    display: flex;
+    width: 100%;
+    height: 12vh;
+    justify-content: start;
+    flex-direction: row;
+}
+
+#circle{
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    width: 6vh;
+    height: 6vh;
+    margin: 1vh;
+}
+
+#row{
+    height: calc(100% - 12vh);
+    width: 100%;
+    text-align: right;
+    font-size: 7vh;
+}
+
+#input{
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+table{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+tr{
+    width: 100%;
+    height: 11.67%;
+}
+
+td, #switcher{
+    background: rgba(255, 255, 255, 0.035);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10.9px);
+    -webkit-backdrop-filter: blur(10.9px);
+    transition: none;
+}
+
+td{
+    text-align: center;
+    width: 25%;
+}
+
+td:hover, #switcher:hover{
+    box-shadow: 0 4px 30px var(--shadow);
+}
+
+#test{
+    opacity: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#equal{
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1000px){
+    td:hover, #switcher:hover{
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    }
+}

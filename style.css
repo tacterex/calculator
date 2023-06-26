@@ -3,13 +3,17 @@
     --black-color: #090909;
     --white-color: #EFEFEF;
     --shadow: rgba(0, 0, 0, 0.23);
+
+    --duration: 0.8s;
+    --delay: 0.1s
 }
 
 *{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--white-color);
     color: var(--black-color);
-    transition: 0.8s;
+    transition: var(--duration);
+    transition-delay: var(--delay)
 }
 
 ::-webkit-scrollbar{
@@ -43,6 +47,7 @@ body{
     height: 12vh;
     justify-content: start;
     flex-direction: row;
+    will-change: transform;
 }
 
 #circle{
@@ -67,6 +72,7 @@ body{
 }
 
 table{
+    will-change: transform;
     position: absolute;
     top: 0;
     left: 0;
@@ -109,19 +115,23 @@ td:hover, #switcher:hover{
 }
 
 .black_advanced{
-    animation: bl-adv 800ms;
+    animation: bl-adv var(--duration);
+    animation-delay: var(--delay);
 }
 
 .black_basic{
-    animation: bl-bas 800ms;
+    animation: bl-bas var(--duration);
+    animation-delay: var(--delay);
 }
 
 .white_advanced{
-    animation: wh-adv 800ms;
+    animation: wh-adv var(--duration);
+    animation-delay: var(--delay);
 }
 
 .white_basic{
-    animation: wh-bas 800ms;
+    animation: wh-bas var(--duration);
+    animation-delay: var(--delay);
 }
 
 @keyframes bl-adv{
